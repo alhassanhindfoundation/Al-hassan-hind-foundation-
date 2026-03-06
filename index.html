@@ -3,269 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Al Hassan Hind Foundation</title>
+
 <script src="https://cdn.tailwindcss.com"></script>
 
-<meta name="description" content="Al Hassan Hind Foundation is a non-profit NGO helping poor families with food, education and medical support in India.">
+<style>
+.dark-mode{
+background:#111;
+color:white;
+}
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+.popup-box{
+background:white;
+padding:30px;
+border-radius:12px;
+text-align:center;
+max-width:400px;
+}
+</style>
 
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body id="body">
 
-<!-- HEADER -->
-<header class="bg-green-700 text-white">
-<div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
+<!-- DONATION POPUP -->
 
-<div class="flex items-center gap-3">
-<img src="logo.jpeg" class="h-10 w-10 rounded-full">
-<h1 class="text-2xl font-bold">Al Hassan Hind Foundation</h1>
-</div>
+<div id="donationPopup" class="popup">
 
-<nav class="space-x-6 text-sm">
-<a href="#about">About</a>
-<a href="#mission">Mission</a>
-<a href="#work">Our Work</a>
-<a href="#gallery">Gallery</a>
-<a href="#volunteer">Volunteer</a>
-<a href="#contact">Contact</a>
-</nav>
+<div class="popup-box">
 
-</div>
-</header>
+<h2 class="text-2xl font-bold mb-3">Help Poor Families</h2>
 
-
-<!-- HERO SECTION -->
-<section class="text-center py-32 text-white"
-style="background:url('banner.jpeg') center/cover no-repeat;">
-
-<h2 class="text-5xl font-bold">Helping People, Changing Lives</h2>
-
-<p class="mt-4 text-lg max-w-2xl mx-auto">
-Al Hassan Hind Foundation is dedicated to helping poor and needy people through education support, food distribution and medical assistance.
+<p class="mb-4">
+Your small donation can provide food and education support.
 </p>
 
 <a href="https://razorpay.me/@alhassanhindfoundation"
-class="bg-green-600 px-8 py-4 rounded-xl mt-6 inline-block text-lg font-semibold">
+class="bg-green-600 text-white px-6 py-3 rounded-lg">
 Donate Now
 </a>
 
-</section>
+<br><br>
 
+<button onclick="closePopup()" class="text-gray-500">
+Close
+</button>
 
-<!-- IMPACT SECTION -->
-<section class="py-20 bg-white text-center">
-
-<h2 class="text-3xl font-bold mb-10">Our Impact</h2>
-
-<div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-
-<div>
-<h3 class="text-4xl font-bold text-green-600">500+</h3>
-<p>People Helped</p>
-</div>
-
-<div>
-<h3 class="text-4xl font-bold text-green-600">200+</h3>
-<p>Food Kits Distributed</p>
-</div>
-
-<div>
-<h3 class="text-4xl font-bold text-green-600">50+</h3>
-<p>Students Supported</p>
-</div>
-
-<div>
-<h3 class="text-4xl font-bold text-green-600">30+</h3>
-<p>Medical Help Cases</p>
 </div>
 
 </div>
 
-</section>
 
+<!-- HEADER -->
 
-<!-- DONATION COUNTER -->
-<section class="bg-gray-100 py-16 text-center">
+<header class="bg-green-700 text-white p-5 flex justify-between">
 
-<h3 class="text-3xl font-bold mb-6">Total Donations Collected</h3>
+<h1 class="text-xl font-bold">
+Al Hassan Hind Foundation
+</h1>
 
-<div class="text-5xl font-bold text-green-600">
-₹ <span id="donationCounter">0</span>
+<div class="flex gap-3">
+
+<button onclick="toggleDark()" class="bg-black px-3 py-1 rounded">
+Dark Mode
+</button>
+
+<select onchange="changeLang(this.value)" class="text-black px-2 py-1 rounded">
+
+<option value="en">English</option>
+<option value="hi">Hindi</option>
+<option value="ur">Urdu</option>
+
+</select>
+
 </div>
 
-<p class="mt-4 text-gray-600">
-Thanks to all donors who support our mission.
+</header>
+
+
+<!-- HERO -->
+
+<section class="text-center py-24 text-white"
+style="background:url('banner.jpeg') center/cover no-repeat">
+
+<h2 id="title" class="text-5xl font-bold">
+Helping People Changing Lives
+</h2>
+
+<p id="desc" class="mt-4 text-lg max-w-2xl mx-auto">
+
+We support poor families with food, education and medical help.
+
 </p>
+
+<a href="https://razorpay.me/@alhassanhindfoundation"
+class="bg-green-600 px-8 py-4 rounded-xl mt-6 inline-block">
+
+Donate Now
+
+</a>
 
 </section>
 
 
 <!-- ABOUT -->
-<section id="about" class="max-w-6xl mx-auto px-4 py-16">
 
-<h3 class="text-3xl font-bold mb-6">About Us</h3>
+<section class="p-16 text-center">
 
-<p class="text-lg">
-Al Hassan Hind Foundation works to improve the lives of underprivileged communities.
-Our mission is to support education, provide food assistance and help people in medical emergencies.
+<h2 id="aboutTitle" class="text-3xl font-bold mb-4">
+About Us
+</h2>
+
+<p id="aboutText">
+
+Al Hassan Hind Foundation works to help poor and needy people through
+education support, ration distribution and medical assistance.
+
 </p>
 
 </section>
 
 
-<!-- MISSION -->
-<section id="mission" class="bg-white py-16">
-
-<div class="max-w-6xl mx-auto px-4">
-
-<h3 class="text-3xl font-bold mb-8">Our Mission</h3>
-
-<div class="grid md:grid-cols-2 gap-6 text-lg">
-
-<div>✔ Support poor families</div>
-<div>✔ Promote education</div>
-<div>✔ Provide ration kits</div>
-<div>✔ Charity programs</div>
-<div>✔ Medical help</div>
-<div>✔ Youth volunteers</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PROGRAMS -->
-<section id="work" class="py-20 bg-gray-100">
-
-<h2 class="text-3xl font-bold text-center mb-10">Our Programs</h2>
-
-<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
-
-<div class="bg-white p-6 shadow rounded-xl">
-<h3 class="text-xl font-bold">Food Distribution</h3>
-<p>Providing meals and ration kits to poor families.</p>
-</div>
-
-<div class="bg-white p-6 shadow rounded-xl">
-<h3 class="text-xl font-bold">Education Support</h3>
-<p>Helping students with books and school supplies.</p>
-</div>
-
-<div class="bg-white p-6 shadow rounded-xl">
-<h3 class="text-xl font-bold">Medical Help</h3>
-<p>Financial assistance for medical treatment.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- GALLERY -->
-<section id="gallery" class="py-20">
-
-<h2 class="text-3xl font-bold text-center mb-10">Our Activities</h2>
-
-<div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-
-<img src="activity1.jpeg" class="rounded-xl">
-<img src="activity2.jpeg" class="rounded-xl">
-<img src="activity3.jpeg" class="rounded-xl">
-
-</div>
-
-</section>
-
-
-<!-- VOLUNTEER FORM -->
-<section id="volunteer" class="py-16">
-
-<div class="max-w-3xl mx-auto px-4">
-
-<h3 class="text-3xl font-bold mb-8 text-center">Become a Volunteer</h3>
-
-<form class="bg-white shadow-lg rounded-2xl p-8 space-y-4">
-
-<input type="text" placeholder="Full Name" class="w-full border p-3 rounded-lg">
-
-<input type="email" placeholder="Email" class="w-full border p-3 rounded-lg">
-
-<input type="tel" placeholder="Phone Number" class="w-full border p-3 rounded-lg">
-
-<textarea placeholder="Why do you want to volunteer?" class="w-full border p-3 rounded-lg"></textarea>
-
-<button class="bg-green-700 text-white px-6 py-3 rounded-xl w-full">
-Submit
-</button>
-
-</form>
-
-</div>
-
-</section>
-
-
-<!-- DONATION QR -->
-<section class="text-center py-16 bg-gray-100">
-
-<h2 class="text-3xl font-bold mb-4">Donate via UPI</h2>
-
-<p class="mb-6">Scan QR code to support our NGO.</p>
-
-<img src="donation-qr.jpeg" class="mx-auto w-72 shadow-lg rounded-lg">
-
-<p class="mt-4 font-bold">UPI ID: 9389799225@pthdfc</p>
-
-</section>
-
-
 <!-- CONTACT -->
-<section id="contact" class="max-w-4xl mx-auto px-4 py-16">
 
-<h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+<section class="text-center p-12 bg-gray-100">
+
+<h3 class="text-2xl font-bold mb-4">
+Contact
+</h3>
 
 <p>Email: alhassanhindfoundation@gmail.com</p>
 <p>Phone: +91 9389799225</p>
-<p>Location: India</p>
 
 </section>
 
 
-<!-- FOOTER -->
-<footer class="bg-gray-900 text-white text-center py-6">
-
-<p>© 2026 Al Hassan Hind Foundation. All Rights Reserved.</p>
-
-</footer>
-
-
 <!-- WHATSAPP BUTTON -->
+
 <a href="https://wa.me/919389799225"
-style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 18px;border-radius:50px;text-decoration:none;font-weight:bold;">
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px;border-radius:50px;text-decoration:none">
 WhatsApp
 </a>
 
 
-<!-- DONATION COUNTER SCRIPT -->
+
 <script>
 
-let target = 50000;
-let counter = document.getElementById("donationCounter");
-let count = 0;
-
-let interval = setInterval(function(){
-
-count += 200;
-
-counter.innerText = count.toLocaleString();
-
-if(count >= target){
-clearInterval(interval);
+function toggleDark(){
+document.getElementById("body").classList.toggle("dark-mode");
 }
 
-},40);
+function closePopup(){
+document.getElementById("donationPopup").style.display="none";
+}
+
+
+/* MULTI LANGUAGE */
+
+function changeLang(lang){
+
+if(lang==="hi"){
+
+document.getElementById("title").innerText="लोगों की मदद करना";
+document.getElementById("desc").innerText="हम गरीब परिवारों की मदद करते हैं।";
+document.getElementById("aboutTitle").innerText="हमारे बारे में";
+document.getElementById("aboutText").innerText="अल हसन हिंद फाउंडेशन गरीब लोगों की मदद करता है।";
+
+}
+
+else if(lang==="ur"){
+
+document.getElementById("title").innerText="لوگوں کی مدد کرنا";
+document.getElementById("desc").innerText="ہم غریب خاندانوں کی مدد کرتے ہیں۔";
+document.getElementById("aboutTitle").innerText="ہمارے بارے میں";
+document.getElementById("aboutText").innerText="ال حسن ہند فاؤنڈیشن غریب لوگوں کی مدد کرتی ہے۔";
+
+}
+
+else{
+
+document.getElementById("title").innerText="Helping People Changing Lives";
+document.getElementById("desc").innerText="We support poor families with food, education and medical help.";
+document.getElementById("aboutTitle").innerText="About Us";
+document.getElementById("aboutText").innerText="Al Hassan Hind Foundation works to help poor people.";
+
+}
+
+}
 
 </script>
 
