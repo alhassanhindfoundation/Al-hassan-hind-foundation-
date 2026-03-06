@@ -1,129 +1,273 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Al Hassan Hind Foundation</title>
 <script src="https://cdn.tailwindcss.com"></script>
-</head><body class="bg-gray-50 text-gray-800"><!-- Header --><header class="bg-green-700 text-white">
-  <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-  <img src="logo.jpeg" class="h-10 w-10 rounded-full" />
-  <h1 class="text-2xl font-bold">Al Hassan Hind Foundation</h1>
-</div>
-    <nav class="space-x-6 text-sm">
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#mission" class="hover:underline">Mission</a>
-      <a href="#work" class="hover:underline">Our Work</a>
-      <a href="#gallery" class="hover:underline">Gallery</a>
-      <a href="#volunteer" class="hover:underline">Volunteer</a>
-      <a href="#donate" class="hover:underline">Donate</a>
-      <a href="#contact" class="hover:underline">Contact</a>
-    </nav>
-  </div>
-</header><!-- Hero --><section class="py-32 text-white text-center"
-style="background:url('banner.jpeg') center/cover no-repeat;">  <h2 class="text-4xl font-bold mb-4">Helping People, Changing Lives</h2>
-  <p class="max-w-2xl mx-auto text-lg">Al Hassan Hind Foundation is a non-profit organization dedicated to helping poor and needy people through education support, food distribution, and medical assistance.</p>
-  <div class="mt-8">
-    
-<a href="https://razorpay.me/@alhassanhindfoundation"
-target="_blank"
-style="position:fixed;bottom:20px;left:20px;background:#16a34a;
-color:white;padding:14px 22px;border-radius:50px;font-weight:bold;
-text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.2);z-index:999;">
-❤️ Donate Now
-</a>
-</a>
-  </div>
-<section class="bg-white py-16 text-center">
-  <h3 class="text-3xl font-bold mb-6">Total Donations Collected</h3>
-  
-  <div class="text-5xl font-bold text-green-600">
-    ₹ <span id="donationCounter">0</span>
-  </div>
 
-  <p class="mt-4 text-gray-600">
-    Thanks to all donors who support our mission.
-  </p>
+<meta name="description" content="Al Hassan Hind Foundation is a non-profit NGO helping poor families with food, education and medical support in India.">
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- HEADER -->
+<header class="bg-green-700 text-white">
+<div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
+
+<div class="flex items-center gap-3">
+<img src="logo.jpeg" class="h-10 w-10 rounded-full">
+<h1 class="text-2xl font-bold">Al Hassan Hind Foundation</h1>
+</div>
+
+<nav class="space-x-6 text-sm">
+<a href="#about">About</a>
+<a href="#mission">Mission</a>
+<a href="#work">Our Work</a>
+<a href="#gallery">Gallery</a>
+<a href="#volunteer">Volunteer</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="text-center py-32 text-white"
+style="background:url('banner.jpeg') center/cover no-repeat;">
+
+<h2 class="text-5xl font-bold">Helping People, Changing Lives</h2>
+
+<p class="mt-4 text-lg max-w-2xl mx-auto">
+Al Hassan Hind Foundation is dedicated to helping poor and needy people through education support, food distribution and medical assistance.
+</p>
+
+<a href="https://razorpay.me/@alhassanhindfoundation"
+class="bg-green-600 px-8 py-4 rounded-xl mt-6 inline-block text-lg font-semibold">
+Donate Now
+</a>
+
 </section>
 
-<script>
-let target = 0; // total donation amount
-let counter = document.getElementById("donationCounter");
-let count = 0;
 
-let interval = setInterval(() => {
-  count += 0;
-  counter.innerText = count.toLocaleString();
-  
-  if (count >= target) {
-    clearInterval(interval);
-  }
-}, 30);
-</script>
-</section><!-- About --><section id="about" class="max-w-6xl mx-auto px-4 py-16">
-  <h3 class="text-3xl font-bold mb-6">About Us</h3>
-  <p class="text-lg">Al Hassan Hind Foundation works to improve the lives of underprivileged communities. Our mission is to support education, provide food assistance, and help people in medical emergencies. We believe that every human deserves dignity, opportunity, and support.</p>
-</section><!-- Mission --><section id="mission" class="bg-white py-16">
-  <div class="max-w-6xl mx-auto px-4">
-    <h3 class="text-3xl font-bold mb-8">Our Mission</h3>
-    <div class="grid md:grid-cols-2 gap-6 text-lg">
-      <div>✔ Support poor and needy families</div>
-      <div>✔ Promote education for children</div>
-      <div>✔ Provide food and ration kits</div>
-      <div>✔ Organize charity and welfare programs</div>
-      <div>✔ Medical support for poor patients</div>
-      <div>✔ Youth volunteer community work</div>
-    </div>
-  </div>
-</section><!-- Work --><section id="work" class="max-w-6xl mx-auto px-4 py-16">
-  <h3 class="text-3xl font-bold mb-10">Our Work</h3>  <div class="grid md:grid-cols-3 gap-8"><div class="bg-white shadow-lg rounded-2xl p-6">
-  <h4 class="font-semibold text-xl mb-3">Food Distribution</h4>
-  <p>Providing meals and ration kits to families who cannot afford daily food.</p>
+<!-- IMPACT SECTION -->
+<section class="py-20 bg-white text-center">
+
+<h2 class="text-3xl font-bold mb-10">Our Impact</h2>
+
+<div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+<div>
+<h3 class="text-4xl font-bold text-green-600">500+</h3>
+<p>People Helped</p>
 </div>
 
-<div class="bg-white shadow-lg rounded-2xl p-6">
-  <h4 class="font-semibold text-xl mb-3">Education Support</h4>
-  <p>Helping students with books, school supplies, and financial support.</p>
+<div>
+<h3 class="text-4xl font-bold text-green-600">200+</h3>
+<p>Food Kits Distributed</p>
 </div>
 
-<div class="bg-white shadow-lg rounded-2xl p-6">
-  <h4 class="font-semibold text-xl mb-3">Medical Help</h4>
-  <p>Providing financial assistance for medical treatment to needy patients.</p>
+<div>
+<h3 class="text-4xl font-bold text-green-600">50+</h3>
+<p>Students Supported</p>
 </div>
 
-  </div>
-</section><!-- Gallery --><section id="gallery" class="bg-gray-100 py-16">
-  <div class="max-w-6xl mx-auto px-4"><h3 class="text-3xl font-bold mb-10 text-center">NGO Activities Gallery</h3>
-
-<div class="grid md:grid-cols-3 gap-6">
-
-  <div class="bg-white rounded-xl shadow p-2">
-    <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497" class="rounded-xl" />
-  </div>
-
-  <div class="bg-white rounded-xl shadow p-2">
-    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5" class="rounded-xl" />
-  </div>
-
-  <div class="bg-white rounded-xl shadow p-2">
-    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c" class="rounded-xl" />
-  </div>
+<div>
+<h3 class="text-4xl font-bold text-green-600">30+</h3>
+<p>Medical Help Cases</p>
+</div>
 
 </div>
 
-  </div>
-</section><!-- Volunteer Form --><section id="volunteer" class="py-16"><div class="max-w-3xl mx-auto px-4"><h3 class="text-3xl font-bold mb-8 text-center">Become a Volunteer</h3><form class="bg-white shadow-lg rounded-2xl p-8 space-y-4"><input type="text" placeholder="Full Name" class="w-full border p-3 rounded-lg" required><input type="email" placeholder="Email" class="w-full border p-3 rounded-lg" required><input type="tel" placeholder="Phone Number" class="w-full border p-3 rounded-lg" required><textarea placeholder="Why do you want to volunteer?" class="w-full border p-3 rounded-lg"></textarea><button class="bg-green-700 text-white px-6 py-3 rounded-xl w-full">Submit</button>
+</section>
 
-</footer><section style="text-align:center;padding:40px;background:#f5f5f5">
-  <h2>Donate to Al Hassan Hind Foundation</h2>
-  <p>Scan the QR code below to support our NGO.</p>
-  <img src="donation-qr.jpeg" alt="UPI Donation QR" style="width:280px;max-width:90%;border:8px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);border-radius:10px;"/>
-  <p style="margin-top:10px;font-weight:bold">UPI ID: 9389799225@pthdfc</p>
-  <p style="color:#555">You can donate using any UPI app.</p></div></section><!-- Contact --><section id="contact" class="max-w-4xl mx-auto px-4 py-16"><h3 class="text-3xl font-bold mb-6">Contact Us</h3><div class="space-y-2 text-lg">
+
+<!-- DONATION COUNTER -->
+<section class="bg-gray-100 py-16 text-center">
+
+<h3 class="text-3xl font-bold mb-6">Total Donations Collected</h3>
+
+<div class="text-5xl font-bold text-green-600">
+₹ <span id="donationCounter">0</span>
+</div>
+
+<p class="mt-4 text-gray-600">
+Thanks to all donors who support our mission.
+</p>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="max-w-6xl mx-auto px-4 py-16">
+
+<h3 class="text-3xl font-bold mb-6">About Us</h3>
+
+<p class="text-lg">
+Al Hassan Hind Foundation works to improve the lives of underprivileged communities.
+Our mission is to support education, provide food assistance and help people in medical emergencies.
+</p>
+
+</section>
+
+
+<!-- MISSION -->
+<section id="mission" class="bg-white py-16">
+
+<div class="max-w-6xl mx-auto px-4">
+
+<h3 class="text-3xl font-bold mb-8">Our Mission</h3>
+
+<div class="grid md:grid-cols-2 gap-6 text-lg">
+
+<div>✔ Support poor families</div>
+<div>✔ Promote education</div>
+<div>✔ Provide ration kits</div>
+<div>✔ Charity programs</div>
+<div>✔ Medical help</div>
+<div>✔ Youth volunteers</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAMS -->
+<section id="work" class="py-20 bg-gray-100">
+
+<h2 class="text-3xl font-bold text-center mb-10">Our Programs</h2>
+
+<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+
+<div class="bg-white p-6 shadow rounded-xl">
+<h3 class="text-xl font-bold">Food Distribution</h3>
+<p>Providing meals and ration kits to poor families.</p>
+</div>
+
+<div class="bg-white p-6 shadow rounded-xl">
+<h3 class="text-xl font-bold">Education Support</h3>
+<p>Helping students with books and school supplies.</p>
+</div>
+
+<div class="bg-white p-6 shadow rounded-xl">
+<h3 class="text-xl font-bold">Medical Help</h3>
+<p>Financial assistance for medical treatment.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery" class="py-20">
+
+<h2 class="text-3xl font-bold text-center mb-10">Our Activities</h2>
+
+<div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+
+<img src="activity1.jpeg" class="rounded-xl">
+<img src="activity2.jpeg" class="rounded-xl">
+<img src="activity3.jpeg" class="rounded-xl">
+
+</div>
+
+</section>
+
+
+<!-- VOLUNTEER FORM -->
+<section id="volunteer" class="py-16">
+
+<div class="max-w-3xl mx-auto px-4">
+
+<h3 class="text-3xl font-bold mb-8 text-center">Become a Volunteer</h3>
+
+<form class="bg-white shadow-lg rounded-2xl p-8 space-y-4">
+
+<input type="text" placeholder="Full Name" class="w-full border p-3 rounded-lg">
+
+<input type="email" placeholder="Email" class="w-full border p-3 rounded-lg">
+
+<input type="tel" placeholder="Phone Number" class="w-full border p-3 rounded-lg">
+
+<textarea placeholder="Why do you want to volunteer?" class="w-full border p-3 rounded-lg"></textarea>
+
+<button class="bg-green-700 text-white px-6 py-3 rounded-xl w-full">
+Submit
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- DONATION QR -->
+<section class="text-center py-16 bg-gray-100">
+
+<h2 class="text-3xl font-bold mb-4">Donate via UPI</h2>
+
+<p class="mb-6">Scan QR code to support our NGO.</p>
+
+<img src="donation-qr.jpeg" class="mx-auto w-72 shadow-lg rounded-lg">
+
+<p class="mt-4 font-bold">UPI ID: 9389799225@pthdfc</p>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-4xl mx-auto px-4 py-16">
+
+<h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+
 <p>Email: alhassanhindfoundation@gmail.com</p>
 <p>Phone: +91 9389799225</p>
 <p>Location: India</p>
-</div></section><!-- Footer --><footer class="bg-gray-900 text-white text-center py-6">
-<p>©️ 2026 Al Hassan Hind Foundation. All Rights Reserved.</p>
-</section></body>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white text-center py-6">
+
+<p>© 2026 Al Hassan Hind Foundation. All Rights Reserved.</p>
+
+</footer>
+
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/919389799225"
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 18px;border-radius:50px;text-decoration:none;font-weight:bold;">
+WhatsApp
+</a>
+
+
+<!-- DONATION COUNTER SCRIPT -->
+<script>
+
+let target = 50000;
+let counter = document.getElementById("donationCounter");
+let count = 0;
+
+let interval = setInterval(function(){
+
+count += 200;
+
+counter.innerText = count.toLocaleString();
+
+if(count >= target){
+clearInterval(interval);
+}
+
+},40);
+
+</script>
+
+</body>
 </html>
